@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 0;
+  line-height: 1.4;
+  font-family: "Roboto", sans-serif;
+}
+
+.animated-element {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20%;
+  background: lighten(blue, 20%);
+  height: 100%;
+  width: 400px;
+  transition: height 1.5s ease-in-out;
+}
+
+section {
+  height: 100vh;
+  &:nth-child(3) {
+    .text {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+  }
+}
+
+.text {
+  padding-left: 50%;
+  padding-top: 15%;
+  padding-right: 5%;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
